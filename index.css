@@ -1,0 +1,50 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+}
+
+.screen {
+    display: none;
+}
+
+#login {
+    display: block;
+}
+
+#todo:target {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+#todo:target ~ #login {
+    display: none;
+}
+
+.input-group-text {
+    font-weight: 600;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-dropdown-btn {
+    background-color: white;
+    color: #212529;
+    border-radius: var(--bs-border-radius);
+    transition: background-color 0.2s ease;
+}
+
+.user-dropdown-btn[aria-expanded="true"] {
+    background-color: #e7f1ff;
+    color: #0d6efd;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.user-dropdown-btn[aria-expanded="true"] .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.2s;
+}
